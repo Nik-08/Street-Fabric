@@ -1,0 +1,157 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "next/core-web-vitals",
+    "react-app/jest",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "createDefaultProgram": true,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "jest-dom", "testing-library", "prettier"],
+  "overrides": [
+    {
+      "files": "*.js",
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    },
+    {
+      "files": ["*.test.{ts,tsx}"],
+      "rules": {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ],
+  "rules": {
+    "react/function-component-definition": [
+      0,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "quote-props": ["error", "consistent-as-needed"],
+    "no-console": "error",
+    "class-methods-use-this": "off",
+    "no-confusing-arrow": ["off"],
+    "no-redeclare": ["off"],
+    "no-underscore-dangle": ["error", { "allow": ["__typename"] }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-empty-function": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", ".tsx"] }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index", "object"],
+          "type"
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin"
+          },
+          {
+            "pattern": "di",
+            "group": "internal"
+          },
+          {
+            "pattern": "di/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "features/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "utils/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "utils",
+            "group": "internal"
+          },
+          {
+            "pattern": "services",
+            "group": "internal"
+          },
+          {
+            "pattern": "store",
+            "group": "internal"
+          },
+          {
+            "pattern": "store/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "services/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "constants/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "constants/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "types/**",
+            "group": "type"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "type"]
+      }
+    ]
+  }
+}

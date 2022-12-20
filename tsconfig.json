@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"],
+      "@assets/*": ["assets/*"]
+
+      // "@components/*": ["src/components/*"],
+      // "@containers/*": ["src/containers/*"],
+      // "@contexts/*": ["src/contexts/*"],
+      // "@framework/*": ["src/framework/basic-rest/*"],
+      // "@settings/*": ["src/settings/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
