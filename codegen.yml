@@ -1,0 +1,12 @@
+overwrite: true
+schema: 'https://streetfabric.eu.saleor.cloud/graphql/'
+documents: 'graphql/*.tsx'
+generates:
+  generated/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+  ./graphql.schema.json:
+    plugins:
+      - introspection
