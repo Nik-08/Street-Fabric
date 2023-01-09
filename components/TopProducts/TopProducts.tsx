@@ -1,6 +1,7 @@
 import React from 'react';
-import { useCollectionBySlugQuery } from 'generated/graphql';
+
 import { Card } from 'components/Card';
+import { useCollectionBySlugQuery } from 'generated/graphql';
 
 export const TopProducts = () => {
   const { data, loading, error } = useCollectionBySlugQuery({

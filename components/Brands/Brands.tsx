@@ -1,7 +1,9 @@
 import React from 'react';
-import { useCategoriesByLevelQuery } from 'generated/graphql';
-import Link from 'next/link';
+
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { useCategoriesByLevelQuery } from 'generated/graphql';
 
 export const Brands = () => {
   const { data, loading, error } = useCategoriesByLevelQuery();
@@ -13,7 +15,7 @@ export const Brands = () => {
         {!loading && !error
           ? brands.map((brand) => (
               <Link
-                href={'/' + `${brand.node.name.toLocaleLowerCase()}`}
+                href={`${brand.node.name.toLocaleLowerCase()}`}
                 key={brand.node.id}
                 className="max-w-max mx-auto"
               >

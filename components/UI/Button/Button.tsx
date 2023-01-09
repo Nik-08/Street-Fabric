@@ -1,4 +1,5 @@
 import React from 'react';
+
 import cn from 'classnames';
 import Link from 'next/link';
 
@@ -24,6 +25,7 @@ export const Button = ({ text, className, type, href }: ButtonProps) => {
         </Link>
       ) : (
         <button
+          type="button"
           className={cn(
             'bg-white px-5 py-2 rounded-3xl cursor-pointer border duration-300 block',
             className,

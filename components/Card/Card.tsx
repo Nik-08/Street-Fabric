@@ -1,6 +1,8 @@
-import React, { memo } from 'react';
+import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { Button } from 'components/UI';
 
 interface CardProps {
@@ -10,7 +12,7 @@ interface CardProps {
 export const Card = ({ product }: CardProps) => {
   return (
     <div className="card max-w-[282px] mx-auto border border-black rounded-xl overflow-hidden min-h-[520px] flex flex-col">
-      <Link href={'products/' + product.slug}>
+      <Link href={`products/${product.slug}`}>
         <Image
           className="max-w-[280px] max-h-[280px]"
           src={product.media[0].url}
@@ -31,7 +33,7 @@ export const Card = ({ product }: CardProps) => {
           {product.pricing.priceRange.start.gross.amount}
           <span className="text-sm">₽</span>
         </span>
-        <Button text={'Buy now'} className={'border-black hover:bg-gray-100'} />
+        <Button text="Buy now" className="border-black hover:bg-gray-100" />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BsSearch } from '@react-icons/all-files/bs/BsSearch';
 
 export const Input = () => {

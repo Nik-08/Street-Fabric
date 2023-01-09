@@ -1,11 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
+
 import { AiOutlineShoppingCart } from '@react-icons/all-files/ai/AiOutlineShoppingCart';
-import { Input, Logo, Navigation } from 'components';
+import classNames from 'classnames';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import { RxCross1 } from 'react-icons/rx';
-import classNames from 'classnames';
+
+import { Input, Logo, Navigation } from 'components';
 
 export const Header = () => {
+  // @ts-ignore
   const [countProduct, setCountProduct] = useState<number>(0);
   const [visibilityNavigation, setVisibilityNavigation] = useState<boolean>(false);
 
@@ -61,7 +64,7 @@ export const Header = () => {
               className={classNames(
                 'flex items-center justify-center h-full w-3/4 bg-white overflow-y-auto relative left-3/4',
                 {
-                  ['-left-0']: visibilityNavigation,
+                  '-left-0': visibilityNavigation,
                 },
               )}
             >

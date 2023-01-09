@@ -1,11 +1,12 @@
 import React from 'react';
+
+import classNames from 'classnames';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { HiOutlineEnvelope } from 'react-icons/hi2';
+import { SlSocialVkontakte } from 'react-icons/sl';
+
 import { Logo } from 'components/Logo';
 import { Navigation } from 'components/Navigation';
-
-import { AiOutlineInstagram } from 'react-icons/ai';
-import { SlSocialVkontakte } from 'react-icons/sl';
-import { HiOutlineEnvelope } from 'react-icons/hi2';
-import classNames from 'classnames';
 
 interface FooterProps {
   className?: string;

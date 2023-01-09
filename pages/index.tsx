@@ -15,12 +15,12 @@ export default function Home() {
           that simply makes you feel good.
         </p>
         <Button
-          text={'Shop'}
-          type={'link'}
-          href={'/'}
-          className={'z-10 hover:bg-transparent hover:border-white hover:text-white'}
+          text="Shop"
+          type="link"
+          href="/"
+          className="z-10 hover:bg-transparent hover:border-white hover:text-white"
         />
-        <div className="banner-filter absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+        <div className="banner-filter absolute w-full h-full bg-black opacity-50 left-0 top-0" />
       </div>
       <div className="container px-2 mx-auto">
         <Brands />
